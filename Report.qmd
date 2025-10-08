@@ -1,0 +1,45 @@
+---
+title: "Project 1: Deriving Expected Possession from Play-By-Play Context"
+format: html
+editor: visual
+authors: Rohan Ahuja, Hazim bin Mohd Izani, Mason Langer
+---
+
+# Executive Summary
+
+Our project aims to define the expected outcome value of an in-game possession based on sequences of play through publicly available NBA play-by-play data. Specifically, the model outlined in the following report intends to show the expected points from a given possession based on key actions, including how the sequence began (rebound, turnover), passing players, and the location that the sequence ended on the court. From this data and the our resulting models, we've highlighted multiple actions that optimize the expected outcome of a sequence and what players exceeded their expected value based on the plays they were on the court for.
+
+Similar advanced statistics have been proposed and implemented for basketball analytics. Particularly the likes of Adjusted Plus-Minus (+/-) have long been used to estimate the efficacy of a player based on their team's performance while on the court. Further, football (soccer) analytics utilizes an expected goals (xG) model to estimate the probability that a shot results in a goal given a number of factors, including where the shot occured on the pitch, where the nearest defender was, and whether the player was on the left or the right side of the field. These statistics provided motivation for our model, which considered aspects of both, namely player contribution and expectation based on play context. However, our derived metric diverged, aiming to abstract higher than the single player action-level (e.g. a shot) while also identifying players who initiated/ended successful sequences of play at a higher rate than their peers.
+
+In order to engineer an accurate final expected possession value model, we developed three models using the same set of data to determine which methodology would lead to the most refined results. With the model we determined to be the most effective based on several statistical insights and qualitative analysis, we have found...
+
+*Results go here...*
+
+# Technical Report
+
+::: callout-note
+In order to replicate the models and findings below, the following libraries are necessary to run the relevant R code:
+
+```{r}
+#| output: false
+##install.packages("hoopR", "ranger","xgboost")
+library(tidyverse)
+library(hoopR)
+library(ranger)
+library(xgboost)
+```
+:::
+
+## Gathering Data
+
+## Creating Expected Possession Value Models
+
+### Laplace Smoothing
+
+### Random Forest
+
+### XGBoost
+
+## Analyzing Model Results
+
+## Conclusion
